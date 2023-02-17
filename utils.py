@@ -1,5 +1,10 @@
 import random
 import requests
+
+
+from player import Player
+
+
 from basicword import BasicWord
 
 
@@ -17,6 +22,10 @@ def load_random_word(path):
     basicword = BasicWord(original_word, set_subwords)
 
     return basicword
+
+
+def statistics():
+    pass
 
 
 

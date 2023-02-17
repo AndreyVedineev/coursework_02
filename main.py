@@ -1,6 +1,5 @@
-
 from player import Player
-from utils import load_random_word
+from utils import load_random_word, statistics
 
 PATH = "https://www.jsonkeeper.com/b/7SGM"  # путь к списку слов
 
@@ -17,8 +16,10 @@ if __name__ == '__main__':
     print('Слова должны быть не короче 3 букв.')
     print('Чтобы закончить игру, угадайте все слова или напишите "stop".')
     print('Поехали, ваше первое слово?')
+
     a = 0
-    while a < len(basicword.set_subwords) :
+
+    while a <= len(basicword.set_subwords):
         user_subword = input("Слово_:")
         if len(user_subword) < 3:
             print('Слишком короткое слово.')
@@ -29,7 +30,15 @@ if __name__ == '__main__':
         if user_subword in player.words_used:
             print('Уже использовано')
             continue
+        if user_subword.lower().strip() == ["stop", "стоп"]:
+            statistics()
+            quit()
 
-
+        print('Верно')
+        player.words_used.append(user_subword)
+        print(f'всего слов {len(basicword.set_subwords)}')
+        print(player.words_used)
+        a += 1
+        print(a)
 
 
