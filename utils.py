@@ -23,10 +23,10 @@ def load_random_word(path):
 
 
 def creates_player(name_user):
-    """ создает экземпляр игрока"""
+    """ Создает экземпляр игрока"""
     player = Player(name_user)
-    return f'Привет, {player.name_user}'
+    return player
 
 
-def statistics():
-    print(f'Игра завершена, вы угадали {player.words_used} слов!')
+def statistics(player):
+    print(f'Игра завершена, вы угадали {len(player.words_used)} слов!')
