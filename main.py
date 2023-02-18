@@ -8,12 +8,11 @@ if __name__ == '__main__':
     player = creates_player(name_user)
     print(f'Привет, {player.name_user}')
     basicword = load_random_word(PATH)
-    original_word = basicword.original_word.upper()
 
-    print(f'Составьте {len(basicword.set_subwords)} слов из слова {original_word}.')
-    print('Слова должны быть не короче 3 букв.')
-    print('Чтобы закончить игру, угадайте все слова или напишите "stop".')
-    print('Поехали, ваше первое слово?')
+    print(f'Составьте {len(basicword.set_subwords)} слов из слова {basicword.original_word.upper()}.')
+    print('Слова должны быть не короче 3 букв.\n'
+          'Чтобы закончить игру, угадайте все слова или напишите "stop".\n'
+          'Поехали, ваше первое слово?')
 
     count = 0
 
@@ -37,4 +36,4 @@ if __name__ == '__main__':
         player.words_used.append(user_subword)
         count += 1
 
-statistics(player)
+    statistics(player)

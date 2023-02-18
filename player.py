@@ -22,11 +22,3 @@ class Player:
             return False
         return True
 
-#
-# word = ["пони", "тон", "ион", "опт", "пот", "топ", "пион", "тип"]
-# pl_1 = Player("Vasay", word)
-# print(pl_1)
-# print(pl_1.get_number_words_used())
-#
-# print(pl_1)
-# print(pl_1.check_word_before("тип"))
