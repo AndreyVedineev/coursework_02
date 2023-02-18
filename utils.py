@@ -1,11 +1,9 @@
 import random
+
 import requests
 
-
-from player import Player
-
-
 from basicword import BasicWord
+from player import Player
 
 
 def load_random_word(path):
@@ -24,8 +22,11 @@ def load_random_word(path):
     return basicword
 
 
+def creates_player(name_user):
+    """ создает экземпляр игрока"""
+    player = Player(name_user)
+    return f'Привет, {player.name_user}'
+
+
 def statistics():
-    pass
-
-
-
+    print(f'Игра завершена, вы угадали {player.words_used} слов!')
