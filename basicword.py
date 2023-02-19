@@ -20,3 +20,6 @@ class BasicWord:
     def counts_subwords(self):
         """подсчет количества подслов (вернет int)."""
         return int(len(self.set_subwords))
+
+
+

@@ -33,6 +33,7 @@ def create_random_word(file):
 
 def creates_player(name_user):
     """ Создает экземпляр игрока"""
+
     player = Player(name_user)
     return player
 

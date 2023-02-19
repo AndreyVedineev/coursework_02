@@ -8,7 +8,7 @@ def check(subword):
     """
     Проверка длины введенного слова - не менее 3 символов, нет такого слова или слово уже угадано.
     :param subword:
-    :return: boolean
+    :return: Boolean
     """
     if len(subword) < 3:
         print('Слишком короткое слово.')
@@ -32,7 +32,7 @@ if __name__ == '__main__':
             print("Вы не указали имя! Повторите!")
 
     player = creates_player(name_user)
-    print(f'Привет, {player.name_user}')
+    print(f'Привет, {player.name_user}\n')
 
     basicword = create_random_word(load_file(PATH))
 
