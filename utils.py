@@ -17,20 +17,18 @@ def load_file(path):
     return response.json()
 
 
-def random_word(file):
+def create_random_word(file):
     """
     получает список слов, выберет случайное слово, создает экземпляр класса `BasicWord,
+    :param file:
     :param path:list
     :return:basicword
     """
-    # response = requests.get(path)
-    # data_json = response.json()
     random_index = random.randint(0, len(file) - 1)
     original_word = file[random_index]['word']
     set_subwords = file[random_index]['subwords']
-    basicword = BasicWord(original_word, set_subwords)
 
-    return basicword
+    return BasicWord(original_word, set_subwords)
 
 
 def creates_player(name_user):
