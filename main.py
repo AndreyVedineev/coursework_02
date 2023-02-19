@@ -1,4 +1,4 @@
-from utils import load_random_word, statistics, creates_player
+from utils import random_word, statistics, creates_player, load_file
 
 PATH = "https://www.jsonkeeper.com/b/7SGM"  # путь к списку слов
 
@@ -7,7 +7,8 @@ if __name__ == '__main__':
     name_user = input('Введите имя игрока_:')
     player = creates_player(name_user)
     print(f'Привет, {player.name_user}')
-    basicword = load_random_word(PATH)
+    # load_file(PATH)
+    basicword = random_word(load_file(PATH))
 
     print(f'Составьте {len(basicword.set_subwords)} слов из слова {basicword.original_word.upper()}.')
     print('Слова должны быть не короче 3 букв.\n'
