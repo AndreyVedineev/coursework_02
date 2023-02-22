@@ -1,4 +1,6 @@
 class BasicWord:
+    """ Слово и комбинации слов из букв Слова"""
+
     def __init__(self, original_word, set_subwords):
         self.original_word = original_word
         self.set_subwords = set_subwords
@@ -20,6 +22,3 @@ class BasicWord:
     def counts_subwords(self):
         """подсчет количества подслов (вернет int)."""
         return int(len(self.set_subwords))
-
-
-

@@ -1,4 +1,6 @@
 class Player:
+    """ Игрок и угаданные им слова"""
+
     def __init__(self, name_user, words_used=[]):
         self.name_user = name_user  # имя пользователя
         self.words_used = words_used  # использованные слова пользователя - list()

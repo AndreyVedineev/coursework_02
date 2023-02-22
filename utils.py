@@ -19,7 +19,7 @@ def load_file(path):
 
 def create_random_word(file):
     """
-    получает список слов, выберет случайное слово, создает экземпляр класса `BasicWord,
+    получает список слов, выберет случайное слово, готовит данные для создания  экземпляра класса `BasicWord,
     :param file:
     :param path:list
     :return:basicword
@@ -32,11 +32,12 @@ def create_random_word(file):
 
 
 def creates_player(name_user):
-    """ Создает экземпляр игрока"""
+    """ Готовить экземпляр игрока"""
 
-    player = Player(name_user)
-    return player
+    return Player(name_user)
 
-
+""
 def statistics(player):
+    """Вычисляет количество угаданных слов"""
+
     print(f'Игра завершена, вы угадали {len(player.words_used)} слов!')
