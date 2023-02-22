@@ -26,7 +26,7 @@ def check(subword):
 if __name__ == '__main__':
     while True:
         name_user = input('Введите имя игрока_:')
-        if name_user is not "":
+        if name_user != "":
             break
         else:
             print("Вы не указали имя! Повторите!")
